@@ -1,0 +1,128 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin-top : 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.centrage {
+  text-align: center;}
+
+.policetitre {
+  font-weight: 400;
+  font-family: Shrikhand;
+  font-size: 30px;
+}
+
+.petittitre {
+  font-weight: 400;
+  font-family: Shrikhand;
+  font-size: 18px;
+}
+
+.police16 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.police24 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.police18 {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.grandtitre {
+  font-size: 30px;
+}
+
+.encolonne {
+  flex-direction: column;
+}
+
+.enblanc {
+ color: #ffffff;
+}
+.gris1 {
+ background-color: #F6F6F6;
+}
+
+.gris2 {
+ background-color: #EAEAEA;
+}
+
+.gris3 {
+  background-color:#353535;
+}
+
+.espacebas {
+  margin-bottom: 15px;
+ }
+
+.margezero {
+  margin: 0%;
+}
+
+.ecarttextefooter {
+  line-height: 25px;
+}
+.footer {
+  padding: 15px;
+  background-color:#353535;
+ }
+
+.padding1 {
+  padding: 1px;
+}
+.paddingh {
+  padding: 30px 0px 0px 0px;
+}
+
+
+.padding10cote {
+  padding : 10px 10px 10px 10px;
+}
+
+.padding40cote {
+  padding : 0px 40px 0px 40px;
+}
+
+.padding30cote {
+  padding : 0px 30px 0px 30px;
+}
+
+.padding20cote {
+  padding : 20px 20px 0px 20px;
+}
+
+.passouligne {
+  text-decoration: none;
+}
+
+.margin5px {
+  margin: 5px;
+  
+}
+
+.entete button {
+  border:none;
+  border-radius: 100px;
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(#FF79DA,#9356DC);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #000000;
+  margin-top: 1rem;
+}
