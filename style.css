@@ -73,9 +73,8 @@ body {
   margin: 0%;
 }
 
-.ecarttextefooter {
-  line-height: 25px;
-}
+
+
 .footer {
   padding: 15px;
   background-color:#353535;
@@ -143,6 +142,8 @@ body {
 
 
 
+
+
 .fonctionnement button {
   width: 335px;
   height: 70px;
@@ -155,6 +156,8 @@ body {
   box-shadow: 0px 4px 15px 0px #00000026;
   margin-top: 1rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -169,4 +172,26 @@ body {
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px #000000;
   margin-top: 1rem;
+}
+
+.basdepage {
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.numeroF {
+  position : relative;
+  left : -20px;
+  background :#9356DC;
+  color :#EAEAEA;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
