@@ -65,8 +65,10 @@ body {
   background-color:#353535;
 }
 
+
+
 .espacebas {
-  margin-bottom: 15px;
+  margin-bottom: 40px;
  }
 
 .margezero {
@@ -104,6 +106,7 @@ body {
   padding : 20px 20px 0px 20px;
 }
 
+
 .passouligne {
   text-decoration: none;
 }
@@ -139,9 +142,56 @@ body {
   align-items: center;
 }
 
+.engrille {
+  display : grid;
+}
+
+.carterestaurant {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  text-decoration: auto;
+ 
+}
+
+.carterestaurant .imagerestaurant {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.carterestaurant .emplacementg {
+  display: grid;
+  font-size: 17px;
+
+  grid-template-columns: 2 ;
+  color: #000000;
+}
+
+.carterestaurant .nomresto {
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 1.7px;
+  font-size: 18px;  
+  color: #000000;
+}
 
 
 
+
+
+.badgenouveau {
+  background: #a6dcce;
+  color: #3c8569;
+  font-weight: 500;
+  padding: 7px 7px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 5px;
+}
 
 
 .fonctionnement button {
@@ -154,7 +204,7 @@ body {
   font-size: 16px;
   cursor:pointer;
   box-shadow: 0px 4px 15px 0px #00000026;
-  margin-top: 1rem;
+  margin-top: 5px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -174,6 +224,11 @@ body {
   margin-top: 1rem;
 }
 
+.footer {
+  padding: 15px;
+
+ }
+
 .basdepage {
   color: #ffffff;
   font-family: Roboto;
@@ -181,6 +236,7 @@ body {
   font-size: 16px;
   text-decoration: none;
   line-height: 25px;
+  background-color:#353535;
 }
 
 .numeroF {
