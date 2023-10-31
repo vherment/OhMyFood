@@ -1,7 +1,6 @@
 html,
 body {
   display: flex;
-  align-items: center;
   flex-direction: column;
   max-width: 1440px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -11,7 +10,12 @@ body {
 }
 
 .centrage {
+  display :flex;
   text-align: center;}
+
+.centrageentete {
+  text-align: center;
+}
 
 .policetitre {
   font-weight: 400;
@@ -22,7 +26,7 @@ body {
 .petittitre {
   font-weight: 400;
   font-family: Shrikhand;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .police16 {
@@ -54,6 +58,22 @@ body {
 .enblanc {
  color: #ffffff;
 }
+
+.ennoir {
+  color:#000000;
+}
+
+
+.couleuricofonction {
+  color :#353535;
+}
+.couleuricofonction:hover{
+  color :#9356DC;
+}
+
+
+
+
 .gris1 {
  background-color: #F6F6F6;
 }
@@ -84,7 +104,7 @@ body {
  }
 
 .padding1 {
-  padding: 1px;
+  padding: 25px;
 }
 .paddingh {
   padding: 30px 0px 0px 0px;
@@ -116,6 +136,10 @@ body {
 
 .agauche {
   float: left;
+}
+
+.serreagauche {
+  align-items: start;
 }
 
 .flex-center {
@@ -164,7 +188,7 @@ body {
 .carterestaurant .emplacementg {
   display: grid;
   font-size: 17px;
-  grid-template-columns: 2 ;
+  grid-template-columns: 2;
   color: #000000;
 }
 
@@ -188,30 +212,93 @@ body {
   border-radius: 5px;
 }
 
+.flecheretour {
+  position :relative;
+  left: 10px;
+  top : 10px; 
+}
+
+.imagerestaurant .coeur {
+  position :relative;
+  right:10px;
+  top: 10px;
+
+}
+
+h2 {
+  margin-top: auto;
+  font-size: 28px;
+  font-family: shrikhand;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
 
 .coeur {
   position: absolute;
   padding : 7px 7px;
   bottom: 30px;
   right: 16px;
-  background-color: #ffffff;
   border-radius: 50%;
-  color: #F6F6F6;
  -webkit-text-stroke-width: 2px;
  -webkit-text-stroke-color: #020202;
+  color: transparent;
 }
+
+
 
 .coeur::before {
   font-weight: bold;
-  transition: color 1s ease-out;
+  transition: color 3s ease-out;
+  transition-duration: 3s;
 }
 
 .coeur:hover::before{
   content: "\f004";
   color: #9356DC;
   cursor: pointer;
- -webkit-text-stroke-color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC,#FF79DA);
+  -webkit-background-clip: text;
+  background-clip: calc();
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0px;
+ }
+
+
+ .coeurmenu {
+  position: absolute;
+  padding : 7px 7px;
+  right: 35px;
+  top: 35px;
+  border-radius: 50%;
+ -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: #020202;
+  color: transparent;
+  padding-top :10px
 }
+
+
+
+.coeurmenu::before {
+  font-weight: bold;
+  transition: color 3s ease-out;
+  transition-duration: 3s;
+}
+
+.coeurmenu:hover::before{
+  content: "\f004";
+  color: #9356DC;
+  cursor: pointer;
+  background: -webkit-linear-gradient(#9356DC,#FF79DA);
+  -webkit-background-clip: text;
+  background-clip: calc();
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0px;
+ }
+
+
 
 
 
@@ -233,6 +320,20 @@ body {
 
 .entete button {
   border:none;
+  border-radius: 100px;
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(#FF79DA,#9356DC);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #000000;
+  margin-top: 1rem;
+}
+
+.commanderbutton button {
+  border:none;
+  width: 186px;
   border-radius: 100px;
   color: #ffffff; 
   font-size: 16px;
@@ -275,3 +376,44 @@ body {
 .enviolet {
   color: #9356DC;
 }
+
+.menus {
+  background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+  padding: 0px 0px 40px;
+  border-radius: 40px 40px 15px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.menus_carte {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 90px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px 0px;
+}
+
+.menus_carte_texte {
+  margin-left: 20px;
+  display: block;
+}
+
+.menus_carte_texte_description {
+line-height: 0.1px;
+}
+
+.menus_carte_prix {
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  position: relative;
+  left: -15px;
+}
+
