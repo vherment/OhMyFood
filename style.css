@@ -233,7 +233,10 @@ h2 {
   font-style: italic;
 }
 
-
+h3 {
+   width : -webkit-fill-available;
+   margin-left: 20px;
+}
 
 
 .coeur {
