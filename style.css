@@ -1,12 +1,17 @@
 html,
+
+
+
+
 body {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   max-width: 1440px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  margin-top : 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .centrage {
@@ -27,6 +32,7 @@ body {
   font-weight: 400;
   font-family: Shrikhand;
   font-size: 24px;
+  align-items: baseline;
 }
 
 .police16 {
@@ -34,6 +40,13 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
+
+.police16bis {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+}
+
 
 .police24 {
   font-family: Roboto;
@@ -94,8 +107,18 @@ body {
   margin: 0%;
 }
 
+.taillemax {
+  max-height: 350px;
+}
+
 .LargeurRestos {
   width : -webkit-fill-available;
+  object-fit: cover;
+}
+
+.largeurfooter {
+  width : -webkit-fill-available;
+  object-fit: cover;
 }
 
 .footer {
@@ -104,7 +127,7 @@ body {
  }
 
 .padding1 {
-  padding: 25px;
+  padding: 1px;
 }
 .paddingh {
   padding: 30px 0px 0px 0px;
@@ -112,6 +135,11 @@ body {
 
 .padding10cote {
   padding : 10px 10px 10px 10px;
+}
+
+
+.padding30 {
+  padding: 35px;
 }
 
 .padding40cote {
@@ -137,6 +165,16 @@ body {
 .agauche {
   float: left;
 }
+
+.agauche2 {
+  width : -webkit-fill-available;
+}
+
+.largeurtitre {
+  display: flex;
+  justify-content: center;
+}
+
 
 .serreagauche {
   align-items: start;
@@ -167,7 +205,7 @@ body {
 
 .engrille {
   display : grid;
-  grid-gap: 25px;
+  grid-gap: 85px;
 }
 
 .carterestaurant {
@@ -225,18 +263,30 @@ body {
 
 }
 
-h2 {
+h2i {
   margin-top: auto;
   font-size: 28px;
   font-family: shrikhand;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
 }
 
-h3 {
-   width : -webkit-fill-available;
-   margin-left: 20px;
+
+h2 {
+  margin-top: auto;
+  font-size: 28px;
+  font-family: Roboto;
+  font-weight: 700;
 }
+
+h3 {
+   width : 35px;
+   margin-left: 30px;
+   border-bottom-style: solid;
+   border-bottom-color: #7bc9ab;
+   border-bottom-width: 4.5px;
+}
+
 
 
 .coeur {
@@ -245,7 +295,7 @@ h3 {
   bottom: 30px;
   right: 16px;
   border-radius: 50%;
- -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: #020202;
   color: transparent;
 }
@@ -272,17 +322,40 @@ h3 {
 
  .coeurmenu {
   position: absolute;
-  padding : 7px 7px;
   right: 35px;
   top: 35px;
   border-radius: 50%;
- -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-width: 1px;
  -webkit-text-stroke-color: #020202;
   color: transparent;
   padding-top :10px
 }
 
+.coeurmenu2 {
+  padding-left: 40px;
+  border-radius: 50%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #020202;
+   color: transparent;
+   padding-top :10px
+}
 
+.coeurmenu2::before {
+  font-weight: bold;
+  transition: color 3s ease-out;
+  transition-duration: 3s;
+}
+
+.coeurmenu2:hover::before{
+  content: "\f004";
+  color: #9356DC;
+  cursor: pointer;
+  background: -webkit-linear-gradient(#9356DC,#FF79DA);
+  -webkit-background-clip: text;
+  background-clip: calc();
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0px;
+ }
 
 .coeurmenu::before {
   font-weight: bold;
@@ -306,7 +379,7 @@ h3 {
 
 
 .fonctionnement button {
-  width: 335px;
+  width: 290px;
   height: 70px;
   border : none;
   border-radius: 10px;
@@ -382,14 +455,15 @@ h3 {
 
 .menus {
   background-color: #f2f2f2;
-  width: 100%;
-  display: flex;
+  max-width: 1024px;
   flex-direction: column;
   margin-top: -40px;
   padding: 0px 0px 40px;
   border-radius: 40px 40px 15px 15px;
   position: relative;
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -404,7 +478,7 @@ h3 {
 }
 
 .menus_carte_texte {
-  margin-left: 20px;
+  margin-left: 10px;
   display: block;
 }
 
@@ -417,6 +491,48 @@ line-height: 0.1px;
   align-items: flex-end;
   font-weight: bold;
   position: relative;
-  left: -15px;
+  left: -10px;
+}
+
+
+@media all and (min-width: 1400px) {
+  .menufonctionnement {
+    display: flex;
+    gap: 25px;
+    flex-direction: row ;
+  }
+
+  .engrille {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+
+  }
+  .padding20cotegauche {
+    padding-left: 70px;
+}
+  .carterestaurant {
+    width : 45%;
+
+  }
+
+  .margin50px {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+
+  .positionbasdroite {
+    display: flex;
+    position : absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+.footer  {
+justify-self: center;
+}
+
 }
 
