@@ -1,17 +1,30 @@
 html,
 
+body {
+  body {
+    animation: fadein 4s; 
+}
 
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+}
 
 
 body {
-  display: flex;
   justify-content: center;
   flex-direction: column;
   max-width: 1440px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin: auto;
 }
 
 .centrage {
@@ -280,11 +293,12 @@ h2 {
 }
 
 h3 {
-   width : 35px;
+   width : 45px;
    margin-left: 30px;
    border-bottom-style: solid;
    border-bottom-color: #7bc9ab;
    border-bottom-width: 4.5px;
+   padding-bottom: 10px;
 }
 
 
@@ -421,6 +435,13 @@ h3 {
   margin-top: 1rem;
 }
 
+.survolcoeur:hover {
+  background-image: linear-gradient(#fe9de3,#a97edc);
+  box-shadow: 0px 0px 25px 0px #000000;
+}
+
+
+
 .footer {
   padding: 15px;
 
@@ -469,13 +490,22 @@ h3 {
 
 .menus_carte {
   display: flex;
-  justify-content: space-between;
   width: 90%;
   height: 90px;
   background-color: white;
   border-radius: 20px;
   margin: 10px 0px;
 }
+
+.chargement {
+
+}
+
+.animation{
+
+}
+
+
 
 .menus_carte_texte {
   margin-left: 10px;
@@ -488,10 +518,47 @@ line-height: 0.1px;
 
 .menus_carte_prix {
   display: flex;
-  align-items: flex-end;
   font-weight: bold;
-  position: relative;
-  left: -10px;
+  margin-right: 0px;
+  margin-left: auto;
+  left: 100px;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  opacity: 0%;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 4rem;
+  height: 100%;
+  margin-right: -50px;
+  border-radius: 0 15px 15px 0;
+  transition: all 600ms ease-in-out;
+  margin-left: 10px;
+ }
+
+.check:hover {
+opacity: 100%;
+display: flex;
+margin-right: 0px;
+}
+
+.check_icon {
+  color: #FFFFFF;
+}
+
+.chargement {
+display: flex;
+animation-duration: 5s;
+
+
+}
+
+.animation {
+display: flex;
+
 }
 
 
