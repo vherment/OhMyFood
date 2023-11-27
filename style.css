@@ -1,24 +1,4 @@
 html,
-
-body {
-  body {
-    animation: fadein 4s; 
-}
-
-@keyframes fadein {
-    0% {
-        opacity:0;
-    }
-    50%{
-        opacity:0.5;
-    }
-    100% {
-        opacity:1;
-    }
-}
-}
-
-
 body {
   justify-content: center;
   flex-direction: column;
@@ -497,13 +477,21 @@ h3 {
   margin: 10px 0px;
 }
 
-.chargement {
 
+body {
+  animation: fadein 10s; 
+}
+@keyframes fadein {
+  0% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
 }
 
-.animation{
 
-}
+
 
 
 
@@ -551,7 +539,7 @@ margin-right: 0px;
 
 .chargement {
 display: flex;
-animation-duration: 5s;
+
 
 
 }
