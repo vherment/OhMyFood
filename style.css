@@ -7,6 +7,49 @@ body {
   margin: auto;
 }
 
+
+.loader {
+  border: 30px solid #9356DC; 
+  border-top: 30px solid #fcfafb33; 
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 2s linear infinite;
+  z-index: 2;
+}
+
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+body:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.loader {
+  animation: spin 3s linear infinite, fadeOut 0.5s 5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
 .centrage {
   display :flex;
   text-align: center;}
@@ -109,15 +152,6 @@ body {
   object-fit: cover;
 }
 
-.largeurfooter {
-  width : -webkit-fill-available;
-  object-fit: cover;
-}
-
-.footer {
-  padding: 15px;
-  background-color:#353535;
- }
 
 .padding1 {
   padding: 1px;
@@ -422,10 +456,6 @@ h3 {
 
 
 
-.footer {
-  padding: 15px;
-
- }
 
 .basdepage {
   color: #ffffff;
@@ -468,18 +498,11 @@ h3 {
 }
 
 
-.menus_carte {
-  display: flex;
-  width: 90%;
-  height: 90px;
-  background-color: white;
-  border-radius: 20px;
-  margin: 10px 0px;
-}
 
 
-body {
-  animation: fadein 10s; 
+
+/*body {
+  animation: fadein 15s; 
 }
 @keyframes fadein {
   0% {
@@ -488,7 +511,7 @@ body {
   100% {
       opacity:1;
   }
-}
+}*/
 
 
 
@@ -501,7 +524,7 @@ body {
 }
 
 .menus_carte_texte_description {
-line-height: 0.1px;
+line-height: inherit;
 }
 
 .menus_carte_prix {
@@ -527,6 +550,7 @@ line-height: 0.1px;
   margin-left: 10px;
  }
 
+
 .check:hover {
 opacity: 100%;
 display: flex;
@@ -537,17 +561,154 @@ margin-right: 0px;
   color: #FFFFFF;
 }
 
+
+
+
 .chargement {
 display: flex;
-
-
-
 }
 
 .animation {
 display: flex;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.menus_carte {
+  display: flex;
+  width: 90%;
+  height: 90px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px 0px;
+  z-index: 1;
+  transition: box-shadow 0.3s ease-in-out; 
+  opacity: 0; 
+  animation: slideInFromRight 1s ease forwards;
+}
+
+
+.menus_carte:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.menus_carte_prix {
+  display: flex;
+  font-weight: bold;
+  margin-right: 0px;
+  margin-left: auto;
+  align-items: end;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.menus_carte:hover .check {
+  opacity: 1; 
+  margin-right: 0px; 
+}
+
+
+
+.menus_carte:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.menus_carte:nth-child(3) {
+  animation-delay: 3s; 
+}
+
+.menus_carte:nth-child(4) {
+  animation-delay: 4s;
+}
+
+.menus_carte:nth-child(6) {
+  animation-delay: 2s; 
+}
+
+.menus_carte:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.menus_carte:nth-child(8) {
+  animation-delay: 4s;
+}
+
+.menus_carte:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.menus_carte:nth-child(11) {
+  animation-delay: 3s;
+}
+
+.menus_carte:nth-child(12) {
+  animation-delay: 4s; 
+}
+
+.menus_carte_texte h4,
+.menus_carte_texte p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-item {
+  margin: 5px;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.footer-content {
+  flex-wrap: nowrap;
+}
+
+
+@media all and (max-width: 765px) {
+  .footer-content {
+    flex-wrap:wrap;
+  }
+
+
+  .menus_carte_texte h4,
+  .menus_carte_texte p {
+    width: 70%; 
+  }
 
 }
+
 
 
 @media all and (min-width: 1400px) {
@@ -585,9 +746,8 @@ display: flex;
     bottom: 15px;
   }
 
-.footer  {
-justify-self: center;
-}
 
 }
+
+
 
