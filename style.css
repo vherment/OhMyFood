@@ -294,7 +294,7 @@ h2i {
 
 h2 {
   margin-top: auto;
-  font-size: 28px;
+  font-size: 24px;
   font-family: Roboto;
   font-weight: 700;
 }
@@ -520,7 +520,7 @@ h3 {
 .menus_carte_texte {
   margin-left: 10px;
   display: block;
-  width : -webkit-fill-available;
+  width : 65%(webkit-fill-available);
 }
 
 .menus_carte_texte_description {
@@ -621,52 +621,40 @@ display: flex;
   margin-right: 0px; 
 }
 
-.menus_carte:nth-child(1) {
+.menus_carte {
+  animation: slideInFromRight 1s ease forwards;
+}
+
+
+.menus_carte[tempo="1s"] {
   animation-delay: 1s;
 }
-
-.menus_carte:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.menus_carte:nth-child(3) {
-  animation-delay: 1s; 
-}
-
-.menus_carte:nth-child(4) {
-  animation-delay: 1s;
-}
-
-.menus_carte:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.menus_carte:nth-child(7) {
-  animation-delay: 2s; 
-}
-
-.menus_carte:nth-child(8) {
+.menus_carte[tempo="2s"] {
   animation-delay: 2s;
 }
-
-.menus_carte:nth-child(9) {
-  animation-delay: 2s;
-}
-
-.menus_carte:nth-child(11) {
+.menus_carte[tempo="3s"] {
   animation-delay: 3s;
 }
-
-.menus_carte:nth-child(12) {
-  animation-delay: 3s;
+.menus_carte[tempo="4s"] {
+  animation-delay: 4s;
 }
-
-.menus_carte:nth-child(13) {
-  animation-delay: 3s; 
+.menus_carte[tempo="5s"] {
+  animation-delay: 5s;
 }
-
-.menus_carte:nth-child(13) {
-  animation-delay: 3s; 
+.menus_carte[tempo="6s"] {
+  animation-delay: 6s;
+}
+.menus_carte[tempo="7s"] {
+  animation-delay: 7s;
+}
+.menus_carte[tempo="8s"] {
+  animation-delay: 8s;
+}
+.menus_carte[tempo="9s"] {
+  animation-delay: 9s;
+}
+.menus_carte[tempo="10s"] {
+  animation-delay: 10s;
 }
 
 .menus_carte_texte h4,
@@ -674,7 +662,7 @@ display: flex;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 60%;
+  width: 100%;
 }
 
 
@@ -704,7 +692,7 @@ display: flex;
 }
 
 
-@media (min-width: 320px) {
+@media (min-width: 500px) {
   .footer-list {
     flex-direction: row; 
     justify-content: left; 
@@ -738,7 +726,9 @@ display: flex;
 
   .menus_carte_texte h4,
   .menus_carte_texte p {
-    width: 95%; 
+    width: 80%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
 }
@@ -784,8 +774,7 @@ display: flex;
 }
 
 @media all and (max-width: 375px) {
-  .menus_carte_texte {
-    width : 140px;
-  }
-  }
+.menus_carte_texte{
+  width : 50%
+}   }
 
