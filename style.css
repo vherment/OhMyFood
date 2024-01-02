@@ -271,9 +271,12 @@ body {
 }
 
 .flecheretour {
-  position :relative;
-  left: 10px;
-  top : 10px; 
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: larger;
+  color: black;
+  text-decoration: none;
 }
 
 .imagerestaurant .coeur {
@@ -519,8 +522,7 @@ h3 {
 
 .menus_carte_texte {
   margin-left: 10px;
-  display: block;
-  width : 65%(webkit-fill-available);
+  width : 60%;
 }
 
 .menus_carte_texte_description {
@@ -692,25 +694,42 @@ display: flex;
 }
 
 
-@media (min-width: 500px) {
-  .footer-list {
-    flex-direction: row; 
-    justify-content: left; 
-  }
 
-  .footer-item {
-    margin: 0 10px; 
-  }
-}
 
 
 @media (min-width: 768px) {
   .footer {
-    padding: 20px 40px; 
+    display: flex;
+    justify-content: right;
+    background-color: #353535; 
+    color: #ffffff; 
+    padding: 30px; 
+    text-align: right; 
+  }
+  
+  .footer-list {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: row-reverse;
+    align-items: center; 
+  }
+  
+  .footer-item {
+    margin-bottom: -20px; 
+    padding-left: 40px;
+  }
+  
+  .footer-link {
+    color: #ffffff; 
+    text-decoration: none; 
   }
 
-  .footer-list {
-    justify-content: space-around; 
+  .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
   }
 }
 
@@ -718,7 +737,7 @@ display: flex;
 
 
 
-@media all and (max-width: 765px) {
+@media all and (max-width: 768px) {
   .footer-content {
     flex-wrap:wrap;
   }
@@ -726,7 +745,7 @@ display: flex;
 
   .menus_carte_texte h4,
   .menus_carte_texte p {
-    width: 80%; 
+    width: 70%; 
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -773,8 +792,8 @@ display: flex;
 
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 475px) {
 .menus_carte_texte{
-  width : 50%
+  width : 80%;
 }   }
 
