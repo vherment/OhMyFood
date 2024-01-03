@@ -521,12 +521,19 @@ h3 {
 
 
 .menus_carte_texte {
+  flex-grow: 1;
+  margin-right: 10px;
   margin-left: 10px;
   width : 60%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menus_carte_texte_description {
-line-height: inherit;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: inherit;
 }
 
 .menus_carte_prix {
@@ -589,6 +596,8 @@ display: flex;
 
 .menus_carte {
   display: flex;
+  justify-content: space-between;
+  
   width: 90%;
   height: 90px;
   background-color: white;
@@ -596,6 +605,7 @@ display: flex;
   margin: 10px 0px;
   z-index: 1;
   transition: box-shadow 0.3s ease-in-out; 
+  overflow: hidden;
   opacity: 0; 
   animation: slideInFromRight 1s ease forwards;
 }
@@ -745,7 +755,6 @@ display: flex;
 
   .menus_carte_texte h4,
   .menus_carte_texte p {
-    width: 70%; 
     overflow: hidden;
     text-overflow: ellipsis;
   }
