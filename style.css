@@ -113,8 +113,43 @@ body {
   color :#9356DC;
 }
 
+.titreenhaut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  font-weight: 400;
+  font-family: Shrikhand;
+  font-size: 30px;
+}
 
+.positionnement {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 1px;  
+}
 
+.header-section  {
+  background-color: #F6F6F6; 
+  text-align: center; 
+  padding: 0 30px; 
+  padding-bottom: 30px;
+}
+
+.titre-section {
+  margin: 0; 
+  font-family: Roboto, Arial, Helvetica, sans-serif; 
+  font-weight: 700; 
+  font-size: 24px; 
+  padding: 20px 20px 0px 20px; 
+}
+
+.nomargin-smallpadding {
+  margin: 0;
+  padding: 10px;
+}
 
 .gris1 {
  background-color: #F6F6F6;
@@ -398,9 +433,37 @@ h3 {
   -webkit-text-stroke-width: 0px;
  }
 
+ .restaurant-section {
+  background-color: #F6F6F6; 
+  width: -webkit-fill-available; 
+  object-fit: cover; 
+ }
 
+ .section-padding-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px; 
+  padding-left: 20px; 
+}
 
+.grille-resto {
+      display: grid;
+    grid-gap: 85px; 
+    background-color: #F6F6F6; 
+    padding: 10px; 
+    margin-bottom: 40px; 
+    margin: 50px; 
+}
 
+.footer-title-link {
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 400; 
+  font-family: Shrikhand; 
+  font-size: 24px;
+  margin-left: 20px;
+}
 
 .fonctionnement button {
   width: 290px;
@@ -418,7 +481,7 @@ h3 {
   align-items: center;
 }
 
-.entete button {
+.header-section button {
   border:none;
   border-radius: 100px;
   color: #ffffff; 
@@ -450,7 +513,10 @@ h3 {
   box-shadow: 0px 0px 25px 0px #000000;
 }
 
-
+.nomargin-smallpadding {
+  margin: 0%;
+  padding: 10px;
+}
 
 
 .basdepage {
@@ -736,6 +802,15 @@ display: flex;
     text-decoration: none; 
   }
 
+  .footer-text-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    
+  }
+
   .footer-content {
     display: flex;
     flex-direction: row-reverse;
@@ -804,5 +879,11 @@ display: flex;
 @media all and (max-width: 475px) {
 .menus_carte_texte{
   width : 80%;
-}   }
+}  
+
+.footer-title-link {
+  margin-left: 0%;
+}
+
+}
 
